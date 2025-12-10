@@ -90,9 +90,9 @@ const Hero = () => {
                 <Button
                   size="lg"
                   className="group bg-accent hover:bg-accent-glow text-accent-foreground font-bold transition-all shadow-2xl shadow-accent/30 hover:shadow-accent/50 hover:scale-[1.05] px-10"
-                  onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  View Case Studies
+                  View Experience
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
 
