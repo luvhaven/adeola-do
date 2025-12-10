@@ -108,7 +108,7 @@ const Contact = () => {
           <div className="text-center mt-12 text-sm text-muted-foreground">
             <p>
               {contactData.availability} •
-              Based in {contactData.location} • Open to remote work
+              Based in {contactData.location}
             </p>
           </div>
         </div>
