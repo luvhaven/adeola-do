@@ -35,6 +35,7 @@ const Experience = () => {
                         {experienceData.map((exp, index) => (
                             <motion.div
                                 key={index}
+                                custom={index}
                                 variants={cardVariants}
                                 whileHover="hover"
                             >

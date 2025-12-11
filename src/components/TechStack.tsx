@@ -52,6 +52,7 @@ const TechStack = () => {
               return (
                 <motion.div
                   key={index}
+                  custom={index}
                   variants={cardVariants}
                   whileHover="hover"
                 >

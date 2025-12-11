@@ -13,14 +13,16 @@ export const containerVariants: Variants = {
 };
 
 export const cardVariants: Variants = {
-    hidden: {
+    hidden: (index: number) => ({
         opacity: 0,
-        y: 40,
+        x: index % 2 === 0 ? -50 : 50,
+        y: 20,
         scale: 0.95,
         rotateX: -10
-    },
+    }),
     visible: {
         opacity: 1,
+        x: 0,
         y: 0,
         scale: 1,
         rotateX: 0,
@@ -34,7 +36,7 @@ export const cardVariants: Variants = {
     hover: {
         scale: 1.05,
         y: -8,
-        boxShadow: "0 20px 40px -5px rgba(var(--accent-rgb), 0.2)",
+        boxShadow: "0 20px 40px -5px hsl(var(--accent) / 0.3)",
         transition: { type: "spring", stiffness: 300 }
     }
 };
@@ -55,7 +57,7 @@ export const iconVariants: Variants = {
     hover: {
         scale: 1.2,
         rotate: 15,
-        filter: "drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.6))",
+        filter: "drop-shadow(0 0 8px hsl(var(--accent) / 0.6))",
         transition: { type: "spring", stiffness: 300 }
     }
 };

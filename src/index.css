@@ -307,7 +307,7 @@ All colors MUST be HSL.
   }
 
   .glass-card {
-    @apply bg-card/50 backdrop-blur-lg border border-accent/10 hover:border-accent/30 transition-all duration-500;
+    @apply bg-card/40 backdrop-blur-xl backdrop-brightness-110 border border-white/10 hover:border-white/20 transition-all duration-500 shadow-lg shadow-black/5;
   }
 
   /* Enhanced Grid Background */

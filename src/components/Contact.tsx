@@ -64,6 +64,7 @@ const Contact = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
+                custom={index}
                 variants={cardVariants}
                 whileHover="hover"
               >

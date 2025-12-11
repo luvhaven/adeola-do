@@ -43,6 +43,7 @@ const Certifications = () => {
                             {completedCerts.map((cert, index) => (
                                 <motion.div
                                     key={index}
+                                    custom={index}
                                     variants={cardVariants}
                                     whileHover="hover"
                                 >
@@ -87,6 +88,7 @@ const Certifications = () => {
                                 {inProgressCerts.map((cert, index) => (
                                     <motion.div
                                         key={index}
+                                        custom={index}
                                         variants={cardVariants}
                                         whileHover="hover"
                                     >
