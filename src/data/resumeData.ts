@@ -31,7 +31,7 @@ export const heroData = {
     statusText: "Open to remote work and sponsored relocation",
     headline: "ADEOLA DANIEL-ORIAZOWAN",
     subtitle: "(IBRAHIM)",
-    jobTitle: "Cloud & Infrastructure Engineer | Cloud DevOps Engineer",
+    jobTitle: "Cloud Infrastructure Engineer | DevSecOps Engineer",
     location: "Lagos, Nigeria",
     valueProposition: "Cloud DevOps Engineer with 5+ years of hands-on experience designing, building, and automating secure, scalable cloud-native infrastructures across AWS, Azure, and GCP. Expertise in Infrastructure as Code, container orchestration, distributed systems, and CI/CD pipelines.",
     yearsExperience: 5,
@@ -147,11 +147,11 @@ export const skillsData: SkillCategory[] = [
     },
     {
         category: "Infrastructure as Code (IaC)",
-        skills: ["Terraform", "AWS CloudFormation", "Ansible"]
+        skills: ["Terraform", "AWS CloudFormation", "ARM Templates", "Bicep", "Ansible"]
     },
     {
         category: "Distributed & Streaming Systems",
-        skills: ["Kafka", "RabbitMQ", "Redis", "Messaging Systems", "Caching Systems"]
+        skills: ["Kafka", "Celery", "RabbitMQ", "Redis"]
     },
     {
         category: "Containerization & Orchestration",
@@ -159,7 +159,7 @@ export const skillsData: SkillCategory[] = [
     },
     {
         category: "CI/CD & Automation",
-        skills: ["GitHub Actions", "ArgoCD", "Jenkins", "Azure Pipelines", "Bitbucket Pipelines"]
+        skills: ["GitHub Actions", "ArgoCD", "Jenkins", "AWS CodePipeline", "Azure Pipelines", "Bitbucket Pipelines"]
     },
     {
         category: "Scripting & Programming",
