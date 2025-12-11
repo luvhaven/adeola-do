@@ -31,7 +31,7 @@ const Certifications = () => {
                     <motion.div
                         className="mb-12"
                         variants={containerVariants}
-                        initial="hidden"
+                        animate="visible"
                     >
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                             <CheckCircle2 className="h-6 w-6 text-accent" />
@@ -77,7 +77,7 @@ const Certifications = () => {
                     {inProgressCerts.length > 0 && (
                         <motion.div
                             variants={containerVariants}
-                            initial="hidden"
+                            animate="visible"
                         >
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <Clock className="h-6 w-6 text-accent" />

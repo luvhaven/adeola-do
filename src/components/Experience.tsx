@@ -28,7 +28,7 @@ const Experience = () => {
                     <motion.div
                         className="space-y-8"
                         variants={containerVariants}
-                        initial="hidden"
+                        animate="visible"
                     >
                         {experienceData.map((exp, index) => (
                             <motion.div

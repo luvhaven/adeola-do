@@ -68,8 +68,7 @@ const Metrics = () => {
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
-            initial="hidden"
-          // whileInView="visible" -> Removed to allow individual card triggers
+            animate="visible"
           >
             {metrics.map((metric, index) => {
               const IconComponent = iconMap[metric.icon] || Cloud;
