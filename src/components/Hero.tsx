@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import heroClouds from "@/assets/hero-clouds-enhanced.jpg";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo-enhanced.png";
 import { motion } from "framer-motion";
 import { heroData } from "@/data/resumeData";
 
