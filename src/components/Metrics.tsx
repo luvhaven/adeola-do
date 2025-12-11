@@ -123,7 +123,7 @@ const Metrics = () => {
               <div className="max-w-4xl mx-auto">
                 <h3 className="mb-4 text-center">About</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                  Cloud DevOps Engineer with 5+ years of hands-on experience designing, building, and
+                  5+ years of hands-on experience designing, building, and
                   automating secure, scalable cloud-native infrastructures across AWS, Azure, and GCP.
                   Expertise in Infrastructure as Code, container orchestration, distributed systems, and CI/CD
                   pipelines. Adept at delivering fintech-grade solutions with a focus on reliability, maintainability,

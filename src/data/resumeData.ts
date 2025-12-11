@@ -33,7 +33,7 @@ export const heroData = {
     subtitle: "(IBRAHIM)",
     jobTitle: "Cloud Infrastructure Engineer | DevSecOps Engineer",
     location: "Lagos, Nigeria",
-    valueProposition: "Cloud DevOps Engineer with 5+ years of hands-on experience designing, building, and automating secure, scalable cloud-native infrastructures across AWS, Azure, and GCP. Expertise in Infrastructure as Code, container orchestration, distributed systems, and CI/CD pipelines.",
+    valueProposition: "5+ years of hands-on experience designing, building, and automating secure, scalable cloud-native infrastructures across AWS, Azure, and GCP. Expertise in Infrastructure as Code, container orchestration, distributed systems, and CI/CD pipelines.",
     yearsExperience: 5,
     email: "adeifeib@gmail.com",
     phone: "+234 8160806303",
@@ -73,7 +73,7 @@ export const metricsData: MetricItem[] = [
 export const experienceData: ExperienceItem[] = [
     {
         company: "Capitalsage Holdings (Ercas)",
-        role: "Lead Cloud DevOps Engineer",
+        role: "Lead DevOps Engineer",
         duration: "May 2025 – Present",
         location: "Lagos, Nigeria",
         achievements: [
