@@ -42,7 +42,7 @@ const Certifications = () => {
                                     animate={isVisible ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
                                 >
-                                    <Card className="p-6 hover-lift bg-card border-accent/20 hover:border-accent group">
+                                    <Card className="p-6 glass-card hover-lift group">
                                         <div className="flex items-start gap-4">
                                             <div className="mt-1 p-3 rounded-lg bg-accent/10 text-accent">
                                                 <CheckCircle2 className="h-6 w-6" />
@@ -82,7 +82,7 @@ const Certifications = () => {
                                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
                                         transition={{ duration: 0.6, delay: (completedCerts.length + index) * 0.1 }}
                                     >
-                                        <Card className="p-6 hover-lift bg-card/60 border-accent/20 hover:border-accent group">
+                                        <Card className="p-6 glass-card hover-lift group">
                                             <div className="flex items-start gap-4">
                                                 <div className="mt-1 p-3 rounded-lg bg-accent/10 text-accent">
                                                     <Clock className="h-6 w-6" />

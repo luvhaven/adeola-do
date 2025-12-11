@@ -28,7 +28,7 @@ const Contact = () => {
 
           {/* Contact cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className={`p-6 hover-lift bg-card/80 backdrop-blur-sm border-accent/20 hover:border-accent group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`}>
+            <Card className={`p-6 glass-card hover-lift group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`}>
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                 <Mail className="h-6 w-6 text-accent" />
               </div>
@@ -41,7 +41,7 @@ const Contact = () => {
               </a>
             </Card>
 
-            <Card className={`p-6 hover-lift bg-card/80 backdrop-blur-sm border-accent/20 hover:border-accent group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '100ms' }}>
+            <Card className={`p-6 glass-card hover-lift group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '100ms' }}>
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                 <Linkedin className="h-6 w-6 text-accent" />
               </div>
@@ -56,7 +56,7 @@ const Contact = () => {
               </a>
             </Card>
 
-            <Card className={`p-6 hover-lift bg-card/80 backdrop-blur-sm border-accent/20 hover:border-accent group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '200ms' }}>
+            <Card className={`p-6 glass-card hover-lift group text-center card-shine stagger-item ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '200ms' }}>
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                 <Github className="h-6 w-6 text-accent" />
               </div>
@@ -73,7 +73,7 @@ const Contact = () => {
           </div>
 
           {/* Primary CTAs */}
-          <Card className={`p-8 md:p-12 bg-card/60 backdrop-blur-sm border-accent/20 card-shine reveal-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '300ms' }}>
+          <Card className={`p-8 md:p-12 glass-card card-shine reveal-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '300ms' }}>
             <div className="text-center space-y-6">
               <h3 className="text-2xl md:text-3xl">Ready to discuss your infrastructure needs?</h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

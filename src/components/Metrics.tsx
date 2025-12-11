@@ -33,7 +33,7 @@ const Metrics = () => {
               return (
                 <Card
                   key={index}
-                  className={`p-6 hover-lift bg-card/80 backdrop-blur-sm border-accent/20 hover:border-accent group card-shine stagger-item ${isVisible ? 'visible' : ''}`}
+                  className={`p-6 glass-card hover-lift group card-shine stagger-item ${isVisible ? 'visible' : ''}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="space-y-4">

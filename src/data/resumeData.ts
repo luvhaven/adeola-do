@@ -143,7 +143,7 @@ export const experienceData: ExperienceItem[] = [
 export const skillsData: SkillCategory[] = [
     {
         category: "Cloud Platforms",
-        skills: ["AWS (EC2, S3, VPC, RDS, Lambda, EKS)", "Azure", "GCP", "DigitalOcean"]
+        skills: ["AWS", "Azure", "GCP", "DigitalOcean", "Linode"]
     },
     {
         category: "Infrastructure as Code (IaC)",

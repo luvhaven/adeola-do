@@ -34,7 +34,7 @@ const Experience = () => {
                                 animate={isVisible ? { opacity: 1, x: 0 } : {}}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                             >
-                                <Card className="overflow-hidden hover-lift bg-card border-accent/20 hover:border-accent group card-shine">
+                                <Card className="overflow-hidden glass-card hover-lift group card-shine">
                                     <div className="p-8">
                                         {/* Header */}
                                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">

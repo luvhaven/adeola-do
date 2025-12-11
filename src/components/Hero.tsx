@@ -152,7 +152,11 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="relative group">
+              <motion.div
+                className="relative group"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
                 {/* Enhanced glow effect */}
                 <div className="absolute inset-0 bg-accent/40 rounded-3xl blur-3xl group-hover:bg-accent/50 transition-all duration-700 animate-pulse" />
 
@@ -178,7 +182,7 @@ const Hero = () => {
                     {content.years_experience}+ Years Experience
                   </p>
                 </motion.div>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
