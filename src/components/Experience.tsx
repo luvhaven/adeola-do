@@ -1,23 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { experienceData } from "@/data/resumeData";
 import { motion } from "framer-motion";
+import { containerVariants, cardVariants, textVariants } from "@/utils/animations";
 
 const Experience = () => {
-    const { ref, isVisible } = useScrollReveal(0.1);
-
     return (
-        <section ref={ref} id="experience" className="py-20 md:py-32 bg-background">
+        <section id="experience" className="py-20 md:py-32 bg-background">
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     {/* Section header */}
                     <motion.div
                         className="text-center mb-16"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6 }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={textVariants}
                     >
                         <h2 className="mb-4">Professional Experience</h2>
                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -26,13 +25,18 @@ const Experience = () => {
                     </motion.div>
 
                     {/* Experience timeline */}
-                    <div className="space-y-8">
+                    <motion.div
+                        className="space-y-8"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                    >
                         {experienceData.map((exp, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                variants={cardVariants}
+                                whileHover="hover"
                             >
                                 <Card className="overflow-hidden glass-card hover-lift group card-shine">
                                     <div className="p-8">
@@ -101,7 +105,7 @@ const Experience = () => {
                                 </Card>
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
