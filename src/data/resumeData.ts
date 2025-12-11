@@ -72,7 +72,7 @@ export const metricsData: MetricItem[] = [
 // Professional Experience
 export const experienceData: ExperienceItem[] = [
     {
-        company: "Capitalsage Holdings (Ercas)",
+        company: "CapitalSage Holdings (Ercas)",
         role: "Lead DevOps Engineer",
         duration: "May 2025 – Present",
         location: "Lagos, Nigeria",

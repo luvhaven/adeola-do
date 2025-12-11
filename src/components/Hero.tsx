@@ -161,15 +161,18 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-accent/40 rounded-3xl blur-3xl group-hover:bg-accent/50 transition-all duration-700 animate-pulse" />
 
                 {/* Photo container with enhanced borders */}
-                <div className="relative overflow-hidden rounded-3xl border-[6px] border-accent/50 shadow-2xl shadow-accent/30 group-hover:border-accent/70 group-hover:shadow-accent/40 transition-all duration-500">
+                {/* Photo container with enhanced blending */}
+                <div className="relative overflow-hidden rounded-[2rem] border-4 border-accent/30 shadow-2xl shadow-accent/20 group-hover:border-accent/60 group-hover:shadow-accent/40 transition-all duration-500 bg-gradient-to-b from-transparent to-accent/10">
                   <img
                     src={profilePhoto}
                     alt="Adeola Daniel-Oriazowan - Cloud Engineer"
-                    className="w-full max-w-md h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full max-w-md h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 mix-blend-normal"
+                    style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
                   />
 
-                  {/* Enhanced overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Advanced blending overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
                 </div>
 
                 {/* Enhanced floating badge */}
