@@ -32,8 +32,6 @@ const Certifications = () => {
                         className="mb-12"
                         variants={containerVariants}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
                     >
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                             <CheckCircle2 className="h-6 w-6 text-accent" />
@@ -45,6 +43,9 @@ const Certifications = () => {
                                     key={index}
                                     custom={index}
                                     variants={cardVariants}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, margin: "-50px" }}
                                     whileHover="hover"
                                 >
                                     <Card className="p-6 glass-card hover-lift group">
@@ -77,8 +78,6 @@ const Certifications = () => {
                         <motion.div
                             variants={containerVariants}
                             initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
                         >
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                                 <Clock className="h-6 w-6 text-accent" />
@@ -90,6 +89,9 @@ const Certifications = () => {
                                         key={index}
                                         custom={index}
                                         variants={cardVariants}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
                                         whileHover="hover"
                                     >
                                         <Card className="p-6 glass-card hover-lift group">

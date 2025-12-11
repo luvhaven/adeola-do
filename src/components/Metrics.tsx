@@ -1,14 +1,46 @@
 import { Card } from "@/components/ui/card";
 import { Cloud, Award, Boxes, Rocket } from "lucide-react";
 import { metricsData } from "@/data/resumeData";
-import { motion } from "framer-motion";
+import { motion, useSpring, useTransform, useInView } from "framer-motion";
 import { containerVariants, cardVariants, iconVariants, textVariants } from "@/utils/animations";
+import { useEffect, useRef } from "react";
 
 const iconMap: Record<string, any> = {
   Cloud,
   Award,
   Boxes,
   Rocket,
+};
+
+const Counter = ({ value }: { value: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
+
+  // Extract number and suffix (e.g., "50+" -> 50, "+")
+  const match = value.match(/([\d.]+)(.*)/);
+  const numberValue = match ? parseFloat(match[1]) : 0;
+  const suffix = match ? match[2] : value;
+
+  const springValue = useSpring(0, {
+    stiffness: 50,
+    damping: 20,
+    duration: 2
+  });
+
+  const displayValue = useTransform(springValue, (current) => Math.round(current));
+
+  useEffect(() => {
+    if (isInView) {
+      springValue.set(numberValue);
+    }
+  }, [isInView, numberValue, springValue]);
+
+  return (
+    <span ref={ref} className="inline-flex">
+      <motion.span>{displayValue}</motion.span>
+      <span>{suffix}</span>
+    </span>
+  );
 };
 
 const Metrics = () => {
@@ -37,8 +69,7 @@ const Metrics = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+          // whileInView="visible" -> Removed to allow individual card triggers
           >
             {metrics.map((metric, index) => {
               const IconComponent = iconMap[metric.icon] || Cloud;
@@ -47,6 +78,9 @@ const Metrics = () => {
                   key={index}
                   custom={index}
                   variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
                   whileHover="hover"
                 >
                   <Card className="p-6 glass-card hover-lift group card-shine h-full" style={{ background: 'transparent' }}>
@@ -60,12 +94,9 @@ const Metrics = () => {
 
                       <div>
                         <motion.div
-                          className="text-4xl font-bold text-foreground mb-1"
-                          initial={{ scale: 0.5, opacity: 0 }}
-                          whileInView={{ scale: 1, opacity: 1 }}
-                          transition={{ type: "spring", stiffness: 100, delay: 0.5 + (index * 0.1) }}
+                          className="text-4xl font-bold text-foreground mb-1 tabular-nums"
                         >
-                          {metric.value}
+                          <Counter value={metric.value} />
                         </motion.div>
                         <div className="text-lg font-semibold text-foreground mb-2">
                           {metric.label}
@@ -85,8 +116,8 @@ const Metrics = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="mt-12 p-8 glass-card border-accent/20">
               <div className="max-w-4xl mx-auto">

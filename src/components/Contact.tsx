@@ -37,8 +37,6 @@ const Contact = () => {
             className="grid md:grid-cols-3 gap-6 mb-12"
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
           >
             {[
               {
@@ -66,6 +64,9 @@ const Contact = () => {
                 key={index}
                 custom={index}
                 variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover="hover"
               >
                 <Card className="p-6 glass-card hover-lift group text-center card-shine h-full">

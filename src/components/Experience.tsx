@@ -29,14 +29,15 @@ const Experience = () => {
                         className="space-y-8"
                         variants={containerVariants}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
                     >
                         {experienceData.map((exp, index) => (
                             <motion.div
                                 key={index}
                                 custom={index}
                                 variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-50px" }}
                                 whileHover="hover"
                             >
                                 <Card className="overflow-hidden glass-card hover-lift group card-shine">
