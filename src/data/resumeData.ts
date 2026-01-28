@@ -31,7 +31,7 @@ export const heroData = {
     statusText: "Open to remote work and sponsored relocation",
     headline: "ADEOLA DANIEL-ORIAZOWAN",
     subtitle: "(IBRAHIM)",
-    jobTitle: "Cloud Infrastructure Engineer | DevSecOps Engineer",
+    jobTitle: "Cloud Infrastructure Engineer | DevOps Engineer",
     location: "Lagos, Nigeria",
     valueProposition: "5+ years of hands-on experience designing, building, and automating secure, scalable cloud-native infrastructures across AWS, Azure, and GCP. Expertise in Infrastructure as Code, container orchestration, distributed systems, and CI/CD pipelines.",
     yearsExperience: 5,
@@ -81,7 +81,7 @@ export const experienceData: ExperienceItem[] = [
             "Built and maintained distributed systems integrating Kafka, RabbitMQ, and Redis for efficient messaging and caching",
             "Implemented IaC using Terraform and AWS CloudFormation for automated, secure infrastructure provisioning",
             "Developed monitoring solutions with New Relic and CloudWatch, ensuring high availability and performance",
-            "Conducted container security scans (Trivy) and code quality assessments (SonarQube) as part of DevSecOps practices"
+            "Conducted container security scans (Trivy) and code quality assessments (SonarQube) as part of DevOps practices"
         ],
         technologies: ["GCP", "Kubernetes", "Helm", "Rancher", "Kafka", "RabbitMQ", "Redis", "Terraform", "CloudFormation", "New Relic", "CloudWatch", "Trivy", "SonarQube"]
     },
